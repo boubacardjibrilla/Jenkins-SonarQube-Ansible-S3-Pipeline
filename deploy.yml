@@ -1,0 +1,7 @@
+- name: Deploying war file to Tomcat Servers
+  hosts: all
+  tasks:
+    - name: Deploying war to Tomcats
+      copy:
+        src: /var/lib/jenkins/workspace/Ansible-Tomcat-pipeline/target/myapp.war
+        dest: /opt/tomcat/webapps/
